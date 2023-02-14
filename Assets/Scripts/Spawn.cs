@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private Ball ball;
+    [SerializeField] private Ball _ball;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class Spawn : MonoBehaviour
 
         while (true)
         {
-            Instantiate(ball, transform.position, Quaternion.identity);
+            Instantiate(_ball, transform.position, Quaternion.identity);
 
             yield return createDelay;
         }
